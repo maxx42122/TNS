@@ -1,0 +1,48 @@
+import java.util.*;
+class SideTriangleDemo{
+	public static void main(String[]args){
+
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter no.of rows :");
+		int row=sc.nextInt();
+
+		int col=0;
+		int num=row;
+
+		for(int i=1;i<row*2;i++){
+	
+
+			if(i<=row){
+				col=i;
+			
+				
+			}
+			else{
+				col=row*2-i;
+				
+
+			}
+			for(int j=1;j<=col;j++){
+
+				System.out.print(num +"\t");
+
+			}
+			 if(i<row){
+                                
+                                num--;
+
+                        }
+                        else{
+                                
+                                num++;
+			}
+			
+			
+			System.out.println();
+		}
+	}
+}
+
+
+
+

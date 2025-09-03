@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyPersonal Music Player</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🎵 MyPersonal Music Player</h1>
+            <div class="visitor-counter">
+                👥 Visitors: <span id="visitorCount">1</span>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <div class="left-panel">
+                <div class="search-section">
+                    <div class="search-container">
+                        <input type="text" class="search-input" placeholder="Search for songs..." id="searchInput">
+                        <button class="voice-btn" id="voiceBtn">🎤</button>
+                    </div>
+                </div>
+
+                <div class="tabs">
+                    <button class="tab active" data-tab="all">All Songs</button>
+                    <button class="tab" data-tab="favorites">Favorites</button>
+                    <button class="tab" data-tab="recent">Recent</button>
+                </div>
+
+                <div class="playlist" id="playlist"></div>
+            </div>
+
+            <div class="right-panel">
+                <div class="now-playing">
+                    <img src="https://via.placeholder.com/250x250/ff6b6b/ffffff?text=No+Song" alt="Album Art" class="album-art" id="albumArt">
+                    <h2 class="song-title" id="songTitle">Select a song</h2>
+                    <p class="song-artist" id="songArtist">No artist</p>
+                </div>
+
+                <div class="progress-container">
+                    <div class="progress-bar" id="progressBar">
+                        <div class="progress" id="progress"></div>
+                    </div>
+                    <div class="time-display">
+                        <span id="currentTime">0:00</span>
+                        <span id="totalTime">0:00</span>
+                    </div>
+                </div>
+
+                <div class="controls">
+                    <button class="control-btn small" id="prevBtn">⏮️</button>
+                    <button class="control-btn large" id="playPauseBtn">▶️</button>
+                    <button class="control-btn small" id="nextBtn">⏭️</button>
+                </div>
+
+                <div class="volume-container">
+                    <span>🔊</span>
+                    <input type="range" class="volume-slider" id="volumeSlider" min="0" max="100" value="50">
+                    <span id="volumeDisplay">50%</span>
+                </div>
+
+                <div class="extra-controls">
+                    <button class="extra-btn" id="shuffleBtn">🔀 Shuffle</button>
+                    <button class="extra-btn" id="repeatBtn">🔁 Repeat</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

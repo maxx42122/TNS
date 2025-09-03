@@ -1,0 +1,33 @@
+import java.util.*;
+class ArrayDemo{
+        public static void main(String[]args){
+
+                Scanner sc=new Scanner (System.in);
+                System.out.println("Enter the size of Array :");
+                int size=sc.nextInt();
+
+                System.out.println("Enter Array elements :");
+                int arr[]=new int[size];
+
+        for(int i=0;i<size;i++){
+
+                arr[i]=sc.nextInt();
+        }
+
+        System.out.println("Enter number to be search :");
+
+        int num=sc.nextInt();
+
+        for(int i=0;i<size;i++){
+
+                if(arr[i]==num){
+                        
+
+                System.out.print(num +" found at index " +i);
+                }
+
+
+        }
+        System.out.println();
+        }
+}
